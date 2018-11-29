@@ -65,6 +65,7 @@ create_window1 (void)
   gtk_widget_show (entry2);
   gtk_fixed_put (GTK_FIXED (fixed1), entry2, 152, 112);
   gtk_widget_set_size_request (entry2, 160, 27);
+  gtk_entry_set_visibility (GTK_ENTRY (entry2), FALSE);
   gtk_entry_set_invisible_char (GTK_ENTRY (entry2), 8226);
   gtk_entry_set_activates_default (GTK_ENTRY (entry2), TRUE);
 

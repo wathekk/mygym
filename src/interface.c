@@ -574,6 +574,7 @@ create_window4 (void)
   GtkWidget *label57;
   GtkWidget *label58;
   GtkWidget *label59;
+  GtkWidget *test;
   GtkWidget *label49;
   GtkWidget *fixed10;
   GtkWidget *fixed11;
@@ -616,6 +617,7 @@ create_window4 (void)
   GtkWidget *label48;
 
   window4 = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  gtk_widget_set_size_request (window4, 800, 500);
   gtk_window_set_title (GTK_WINDOW (window4), _("window4"));
 
   fixed7 = gtk_fixed_new ();
@@ -624,8 +626,8 @@ create_window4 (void)
 
   notebook9 = gtk_notebook_new ();
   gtk_widget_show (notebook9);
-  gtk_fixed_put (GTK_FIXED (fixed7), notebook9, 0, 0);
-  gtk_widget_set_size_request (notebook9, 1296, 680);
+  gtk_fixed_put (GTK_FIXED (fixed7), notebook9, 0, 40);
+  gtk_widget_set_size_request (notebook9, 1288, 672);
 
   notebook10 = gtk_notebook_new ();
   gtk_widget_show (notebook10);
@@ -684,6 +686,11 @@ create_window4 (void)
   gtk_widget_show (label59);
   gtk_fixed_put (GTK_FIXED (fixed9), label59, 200, 248);
   gtk_widget_set_size_request (label59, 49, 17);
+
+  test = gtk_button_new_with_mnemonic (_("test"));
+  gtk_widget_show (test);
+  gtk_fixed_put (GTK_FIXED (fixed9), test, 288, 72);
+  gtk_widget_set_size_request (test, 66, 29);
 
   label49 = gtk_label_new (_("Welcome"));
   gtk_widget_show (label49);
@@ -876,6 +883,7 @@ create_window4 (void)
   GLADE_HOOKUP_OBJECT (window4, label57, "label57");
   GLADE_HOOKUP_OBJECT (window4, label58, "label58");
   GLADE_HOOKUP_OBJECT (window4, label59, "label59");
+  GLADE_HOOKUP_OBJECT (window4, test, "test");
   GLADE_HOOKUP_OBJECT (window4, label49, "label49");
   GLADE_HOOKUP_OBJECT (window4, fixed10, "fixed10");
   GLADE_HOOKUP_OBJECT (window4, fixed11, "fixed11");
